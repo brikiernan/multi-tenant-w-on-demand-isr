@@ -19,13 +19,7 @@ const middleware: NextMiddleware = req => {
     return NextResponse.rewrite(url);
   }
 
-  if (
-    host === hostname
-    // revalidate ||
-    // isApi ||
-    // isPublic ||
-    // isVercel ||
-  ) {
+  if (host === hostname) {
     return NextResponse.next();
   }
 
