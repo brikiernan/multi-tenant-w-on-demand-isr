@@ -10,7 +10,7 @@ const middleware: NextMiddleware = req => {
 
   const revalidate = req.headers.get('x-prerender-revalidate');
   if (!!revalidate) {
-    url.pathname = `/_sites${path}`;
+    url.pathname = path === '/' ? path : `/_sites${path}`;
     return NextResponse.rewrite(url);
   }
 

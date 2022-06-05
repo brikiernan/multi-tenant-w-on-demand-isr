@@ -15,6 +15,7 @@ export default async function handler(
       res.unstable_revalidate('/site1'),
       res.unstable_revalidate('/site2'),
       res.unstable_revalidate('/site3'),
+      res.unstable_revalidate('/'),
     ]);
     return res.json({ revalidated: true });
   } catch (err) {
