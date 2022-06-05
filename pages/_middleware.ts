@@ -25,7 +25,7 @@ const middleware: NextMiddleware = req => {
   if (!host || isApi || isPublic) return NextResponse.next();
 
   const isVercel = host.includes('vercel');
-  const currentHost = host.replace('.' + hostname, '');
+  const currentHost = host.replace('.returnonpostcards.com', '');
   console.log('Current Host', currentHost);
 
   const isHome = host === hostname || host === homeUrl;
