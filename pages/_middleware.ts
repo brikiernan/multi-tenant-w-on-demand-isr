@@ -26,6 +26,7 @@ const middleware: NextMiddleware = req => {
 
   const isVercel = host.includes('vercel');
   const currentHost = host.replace('.' + hostname, '');
+  console.log('Current Host', currentHost);
 
   const isHome = host === hostname || host === homeUrl;
 
