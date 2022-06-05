@@ -30,7 +30,7 @@ export const sites: Site[] = [
     subdomain: 'site2',
     customDomain: 'site2.com',
     content: 'Site 2 content...',
-    name: 'Site 1',
+    name: 'Site 2',
     posts: [
       { id: 1, content: 'Site 2 post 1 content...', slug: 'post1' },
       { id: 2, content: 'Site 2 post 2 content...', slug: 'post2' },
@@ -41,7 +41,7 @@ export const sites: Site[] = [
     subdomain: 'site3',
     customDomain: 'site3.com',
     content: 'Site 3 content...',
-    name: 'Site 1',
+    name: 'Site 3',
     posts: [
       { id: 1, content: 'Site 3 post 1 content...', slug: 'post1' },
       { id: 2, content: 'Site 3 post 2 content...', slug: 'post2' },
@@ -52,7 +52,7 @@ export const sites: Site[] = [
     subdomain: 'site4',
     customDomain: 'site4.com',
     content: 'Site 4 content...',
-    name: 'Site 1',
+    name: 'Site 4',
     posts: [
       { id: 1, content: 'Site 4 post 1 content...', slug: 'post1' },
       { id: 2, content: 'Site 4 post 2 content...', slug: 'post2' },
