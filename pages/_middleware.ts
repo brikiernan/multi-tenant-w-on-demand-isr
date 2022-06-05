@@ -1,9 +1,8 @@
 import { NextMiddleware, NextResponse } from 'next/server';
 
+const homeUrl = 'returnonpostcards.com';
 const prod = process.env.NODE_ENV === 'production';
-const hostname = prod ? 'localhost:3000' : 'localhost:3000';
-
-const homeUrl = '';
+const hostname = prod ? homeUrl : 'localhost:3000';
 
 const middleware: NextMiddleware = req => {
   const url = req.nextUrl.clone();
@@ -26,9 +25,8 @@ const middleware: NextMiddleware = req => {
   if (!host || isApi || isPublic) return NextResponse.next();
 
   const isVercel = host.includes('vercel');
-  const currentHost = host
-    .replace('.' + hostname, '')
-    .replace('.multi-tenant-w-on-demand-isr.vercel.app', '');
+  const currentHost = host.replace('.' + hostname, '');
+
   const isHome = host === hostname || host === homeUrl;
 
   if (isHome || currentHost === 'www' || isVercel) {
